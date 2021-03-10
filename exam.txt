@@ -1,0 +1,119 @@
+א( ב-NET .יש טיפוס המייצג Delegate שיכול לקבל רשימה של פרמטרים ומחזיר תשובה. מה שמו?
+func 
+ב( בנוסף ישנו טיפוס המייצג Delegate שיכול לקבל רשימה של פרמטרים ומחזיר void .מה שמו? 
+action
+
+5 .בתוכנה לניהול בנק, בכל פעם שלקוח מושך כסף מן הכספומט, יש להוריד את הסכום שהוא משך מן
+החשבון שלו. אם לאחר המשיכה היתרה בחשבון תהיה שלילית, יש לשלוח ללקוח הודעת התראה.
+כיצד Events יכולים לסייע לנו במקרה כזה? 
+
+
+6 .א( מה היא חתימת ה- Delegate של EventHandler( רמז: ב-VS לחצו על F12 )
+ב( כיצד מייצרים EventArgs מטיפוס חדש? צור אחד שכזה לצורך ההדגמה. 
+EventHandler(object sender, EventArgs e);
+
+ public class NewEventArgs : EventArgs
+{
+        private string _data;
+        public NewEventArgs(string data)
+        {
+            _data = data;
+        }
+        public string { get; {return _data;}}
+    }
+
+8 .ניקח לדוגמא שתי תוכנות:
+א( מחשבון מדעי שבכל פעם מקבל פקודה מהמשתמש ומבצע חישוב(
+ב( תוכנת צ'אט מקוון שיכולה לקבל הודעות ממספר משתמשים בו זמנית ומציגה אותם.
+באיזה מקרה מן השניים יהיה כדאי להשתמש ב- Threaded-Multi ?מדוע? 
+
+2, because for online chats, informations need to happen quickly while with calculating you get one information at a time
+
+
+א( צור תוכנית ובה פונקציה בשם .9.  LongOperation המבצעת לולאת for( ריקה( שרצה מיליארד
+פעמים )1000000000 )וכאשר היא מסיימת, מדפיסה "Done ."כעת ב -Main קרא לפונקציה הזאת 5
+פעמים באופן סדרתי. הרץ את התוכנית. כמה זמן לקח לה להסתיים?
+8213 ms
+ב( כעת במקום לקרוא לפונקציה, צור חמישה Threads ,הכנס להם את הפונקציה כפרמטר והפעל
+אותם במקביל. כמה זמן לקח לתוכנית להסתיים? האם זה היה מהר יותר מבסעיף א'? מדוע? 
+it was much faster (1721), because multithread can work with more information and make it faster
+
+10 .הסבר את משמעותו כל אחד ממצבי ה- Thread הבאים:
+Running - a thread that is processing
+Suspended -suspending the thread as in pausing which can be continued with resume 
+Aborted -to abort the thread and stop it
+
+
+11 .בתוכנה למסחר בבורסה מוצג למשתמש מצב המניות בכל רגע נתון באמצעות Thread ראשי. בנוסף
+אליו יש Thread אחד נוסף שרץ ותפקידו להוריד מהאינטרנט מידע על מצב המניות הנוכחי כל 5
+שניות. לו היית מתכנן את המערכת, האם היית מגדיר את ה-Thread שמוריד מהאינטרנט כ-
+ ?מדוע? Foreground Thread או Background Thread
+background 
+
+13 .בכל אחד מן המקרים, קבע האם עדיף להשתמש ב- Thread רגיל או ב -ThreadPool :
+א( Thread שתפקידו להוריד קובץ גדול מהשרת.thread
+ב( Thread שתפקידו לבצע חישוב מתמטי אסינכרוני ולהחזיר תשובה בזמן קצר . threadpool 
+
+15 .א( הסבר מתי כדאי להשתמש ב -lock ? == when we want to ensure that the threat works at a time
+ב( מהו Section Critical ? == when one thread can work at a time and gets stuck
+ג( איזה פעולות מתרחשות מאחורי הקלעים כאשר מבצעים lock( ? רמז: השתמש ב-ILDASM )
+ד( ב- Windows ,מומלץ שרק Thread אחד יוכ ל לכתוב לקובץ בזמן נתון . אם נרצה לכתוב תוכנית בה
+מספר Threads ידרשו לכתוב לקובץ מסוים , האם lock יוכל לסייע לנו? no it wouldnt help
+
+16 .תן דוגמא ל-Collection שהוא Safe Thread .מה היתרון והחיסרון להשתמש בו?
+ConcurrentQueue
+
+it works less good than when using stack and queue but it gives it more access.
+
+17*( .אתגר( בתוכנית מחשב יכול להתרחש מצב שבו היא תקועה בגלל ש-A Thread מחכה ל-B Thread
+ו-B Thread מחכה ל- A Thread .כיצד מצב זה נקרא?
+deadlock
+
+18 .בתוכנית אותה ניתן לדמות לקופת חולים, יש חדר רופא וחדר אחות. בכל חדר יכול להיות נוכח חולה
+אחד באותו הרגע. החולים מחכים בתור ובכל פעם ש חולה מסיים את הפגישה עם הרופא, הוא
+ממשיך לחדר האחות והחולה הבא נקרא לחדר הרופא. באיזה כלי ב -#C הכי כדאי להשתמש לצורך
+מימוש התוכנית? )אחד או יותר(.
+Monitor.Enter() + Monitor.Exit() )א
+ב( ThreadPool
+Wait / Pulse )ג
+a c
+
+21 .ציין באיזה Event Reset ( Manual או Auto )נשתמש כאשר:
+א( אנו רוצים שכל ה -Threads שמגיעים לנקודה מסוימת יעצרו שם וימשיכו רק כאשר נאפשר להם,
+אחד בנפרד בכל הרשאה. auto reset 
+ב( אנו רוצים שכל ה -Threads שמגיעים לנקודה מסוימת יעצרו שם, וכאשר נאפשר להם יעברו כולם
+בבת אחת. manuel reset
+
+23 .א( ציין לפחות שני יתרונות של Tasks על גבי Threads . 
+you can create tasks that run from asynchronously
+tasks can tell us if its working and also return the result 
+
+
+24 .כברירת מחדל, ה-Task שנייצר )קב ע: נכון / לא נכון(:
+א( יהיה מוגדר כ -Thread Background ? yes
+ב( מ שתמש ב- Thread שנלקח מן ה -ThreadPool ? yes 
+
+
+25 .א( כיצד כדאי לייצר Task שנועד לבצע פעולה ארוכה?
+ב( ייצר Task שמבצע Sleep של 10 שניות. ממש זאת בשיטה שהגדרת בסעיף א' . 
+longrunning
+Task t = new Task(() => { Thread.Sleep(10000); }, TaskCreationOptions.LongRunning);
+
+32 .א( מה ההבדל בין ביצוע Suspend ל- Thread לבין ביצוע Cancel ל-Task ?מה עדיף מבניהם?
+ב( איזה פרמטר עלינו לשלוח ל-Task כדי שיהיה ניתן לבטל אותו?
+thread cancel cancels it right away, while suspends only does when its safe to do so, which means its better to use suspend
+
+cancellationtoken 
+
+35 .מה מייצגת התוספת Async לשמות פונקציות ב-NET ?
+An async method runs synchronously until it reaches its first await expression, at which point the method is suspended until the awaited task is complete.
+
+36 .א( איזו מילה אנו חייבים להוסיף לחתימת הפונקציה המשתמש ב -await ?
+ב( האם התוספת הזו תגרור שינוי ב -Interface 
+async 
+Yes, it allows the method to only have the return types: Task, Task<TResult> and void.
+
+37 .באיזה סוגים של פעולות מומלץ להשתמש ב-await async?
+Task, Task<TResult> and void operations
+
+39 .מדוע לא נכון תמיד להשתמש ב-await async לכל מטרה שהיא?
