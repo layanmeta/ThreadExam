@@ -1,0 +1,6 @@
+C:\Users\layan\source\repos\ThreadExam1\ThreadExam1\bin\Debug\ThreadExam1.exe.config
+C:\Users\layan\source\repos\ThreadExam1\ThreadExam1\bin\Debug\ThreadExam1.exe
+C:\Users\layan\source\repos\ThreadExam1\ThreadExam1\bin\Debug\ThreadExam1.pdb
+C:\Users\layan\source\repos\ThreadExam1\ThreadExam1\obj\Debug\ThreadExam1.csprojAssemblyReference.cache
+C:\Users\layan\source\repos\ThreadExam1\ThreadExam1\obj\Debug\ThreadExam1.exe
+C:\Users\layan\source\repos\ThreadExam1\ThreadExam1\obj\Debug\ThreadExam1.pdb
