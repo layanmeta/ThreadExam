@@ -1,0 +1,6 @@
+C:\Users\layan\source\repos\ThreadExam33\ThreadExam33\bin\Debug\ThreadExam33.exe.config
+C:\Users\layan\source\repos\ThreadExam33\ThreadExam33\bin\Debug\ThreadExam33.exe
+C:\Users\layan\source\repos\ThreadExam33\ThreadExam33\bin\Debug\ThreadExam33.pdb
+C:\Users\layan\source\repos\ThreadExam33\ThreadExam33\obj\Debug\ThreadExam33.csprojAssemblyReference.cache
+C:\Users\layan\source\repos\ThreadExam33\ThreadExam33\obj\Debug\ThreadExam33.exe
+C:\Users\layan\source\repos\ThreadExam33\ThreadExam33\obj\Debug\ThreadExam33.pdb
