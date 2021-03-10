@@ -1,0 +1,6 @@
+C:\Users\layan\source\repos\ThreadExam22\ThreadExam22\bin\Debug\ThreadExam22.exe.config
+C:\Users\layan\source\repos\ThreadExam22\ThreadExam22\bin\Debug\ThreadExam22.exe
+C:\Users\layan\source\repos\ThreadExam22\ThreadExam22\bin\Debug\ThreadExam22.pdb
+C:\Users\layan\source\repos\ThreadExam22\ThreadExam22\obj\Debug\ThreadExam22.csprojAssemblyReference.cache
+C:\Users\layan\source\repos\ThreadExam22\ThreadExam22\obj\Debug\ThreadExam22.exe
+C:\Users\layan\source\repos\ThreadExam22\ThreadExam22\obj\Debug\ThreadExam22.pdb
